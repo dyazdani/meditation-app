@@ -21,3 +21,11 @@ As a user, I want to be able to...
 * Find Ambient Sounds: https://commons.m.wikimedia.org/wiki/Category:Ambience
 
 * More free sounds: https://freesound.org/
+
+## Sources
+
+### Images
+
+* Forest: https://commons.wikimedia.org/wiki/File:Forest_sunrise.jpg
+* Beach: https://commons.wikimedia.org/wiki/File:Beach_with_rocky_shore_(Unsplash).jpg
+

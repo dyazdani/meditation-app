@@ -32,3 +32,9 @@ As a user, I want to be able to...
 * Stream: https://commons.wikimedia.org/wiki/File:Diana_Creek_Rapids.webp
 
 
+### Audio
+
+* Forest: https://commons.wikimedia.org/wiki/File:Forest_lawn_creek.ogg
+* Beach: https://commons.wikimedia.org/wiki/File:Beach_sounds_South_Carolina.ogg
+* Rain: https://commons.wikimedia.org/wiki/File:Rain_thunder_and_birds.ogg
+* Stream: https://commons.wikimedia.org/wiki/File:Forest_lawn_creek.ogg

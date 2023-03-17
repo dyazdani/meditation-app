@@ -28,4 +28,5 @@ As a user, I want to be able to...
 
 * Forest: https://commons.wikimedia.org/wiki/File:Forest_sunrise.jpg
 * Beach: https://commons.wikimedia.org/wiki/File:Beach_with_rocky_shore_(Unsplash).jpg
+* Rain: https://commons.wikimedia.org/wiki/File:Rain_drops_(Unsplash).jpg
 

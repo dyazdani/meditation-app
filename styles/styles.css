@@ -22,3 +22,7 @@ main {
     width: 50%;
     padding: 1rem;
 }
+
+select {
+    background-color: rgba(80, 183, 197);
+}

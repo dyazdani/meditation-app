@@ -1,8 +1,10 @@
 // ------* selecting elements that will change with scene selection *--------
-const html = document.documentElement.querySelector('html');
+const html = document.documentElement;
 const header = document.querySelector('h1');
 const select = document.querySelector('select');
 const audio = document.querySelector('audio');
+
+console.log(html);
 
 // ------* function declarations *---------
 
@@ -23,13 +25,13 @@ function renderPage(selection) {
 
 function renderHeader(selection) {
     if (selection === 'beach') {
-        h1.innerText = 'Beach';
+        header.innerText = 'Beach';
     } else if (selection === 'forest') {
-        h1.innerText = 'Forest';
+        header.innerText = 'Forest';
     } else if (selection === 'stream') {
-        h1.innerText = 'Stream';
+        header.innerText = 'Stream';
     } else if (selection === 'rain') {
-        h1.innerText = 'Rain';
+        header.innerText = 'Rain';
     }
 }
 
@@ -47,13 +49,13 @@ function renderSelectionBackground(selection) {
 
 function renderBackground(selection) {
     if (selection === 'beach') {
-        html.style.background = 'url("../images/beach.jpeg") no-repeat center';
+        html.style.background = 'url("../images/beach.jpeg")';
     } else if (selection === 'forest') {
-        html.style.background = 'url("../images/forest.jpeg") no-repeat center';
+        html.style.background = 'url("../images/forest.jpeg")';
     } else if (selection === 'stream') {
-        html.style.background = 'url("../images/stream.jpeg") no-repeat center';
+        html.style.background = 'url("../images/stream.webp")';
     } else if (selection === 'rain') {
-        html.style.background = 'url("../images/rain.jpeg") no-repeat center';
+        html.style.background = 'url("../images/rain.jpeg")';
     }
 }
 
@@ -68,3 +70,9 @@ function renderAudio(selection) {
         audio.setAttribute('src', '../audio/rain.mp3');
     }
 }
+
+// ------* event listener *---------
+
+select.addEventListener('input', (event) => {
+    onSceneOptionSelected(event);
+})

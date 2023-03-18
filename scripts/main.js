@@ -4,8 +4,6 @@ const header = document.querySelector('h1');
 const select = document.querySelector('select');
 const audio = document.querySelector('audio');
 
-console.log(html);
-
 // ------* function declarations *---------
 
 function onSceneOptionSelected(event) {
@@ -13,10 +11,10 @@ function onSceneOptionSelected(event) {
     localStorage.setItem('selection', sceneSelection);
     const selection = localStorage.getItem('selection');
     
-    renderPage(selection);
+    renderSelectedScene(selection);
 }
 
-function renderPage(selection) {
+function renderSelectedScene(selection) {
     renderBackground(selection);
     renderHeader(selection)
     renderSelectionBackground(selection);
@@ -50,12 +48,16 @@ function renderSelectionBackground(selection) {
 function renderBackground(selection) {
     if (selection === 'beach') {
         html.style.background = 'url("../images/beach.jpeg")';
+        html.style.backgroundSize = 'cover';
     } else if (selection === 'forest') {
         html.style.background = 'url("../images/forest.jpeg")';
+        html.style.backgroundSize = 'cover';
     } else if (selection === 'stream') {
         html.style.background = 'url("../images/stream.webp")';
+        html.style.backgroundSize = 'cover';
     } else if (selection === 'rain') {
         html.style.background = 'url("../images/rain.jpeg")';
+        html.style.backgroundSize = 'cover';
     }
 }
 
@@ -76,3 +78,4 @@ function renderAudio(selection) {
 select.addEventListener('input', (event) => {
     onSceneOptionSelected(event);
 })
+

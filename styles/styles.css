@@ -1,5 +1,5 @@
 html {
-    background: url("../images/beach.jpeg") no-repeat center;
+    /* background: url("../images/beach.jpeg") no-repeat center; */
     background-size: cover;
     height: 100vh;
 }
@@ -28,5 +28,5 @@ h1 {
 }
 
 select {
-    background-color: rgba(80, 183, 197);
+    /* background-color: rgba(80, 183, 197); */
 }

@@ -1,17 +1,27 @@
-// ------* selecting elements that will change with screen selection *--------
+// ------* selecting elements that will change with scene selection *--------
 const header = document.querySelector('h1');
 const select = document.querySelector('select');
 const audio = document.querySelector('audio');
 
 // ------* function declarations *---------
 
-function onScreenOptionSelected(event) {
-    const screenSelection = event.target.value;
-    localStorage.setItem('selection', screenSelection);
+function onSceneOptionSelected(event) {
+    const sceneSelection = event.target.value;
+    localStorage.setItem('selection', sceneSelection);
     const selection = localStorage.getItem('selection');
-
     
-    renderBackground();
+    const h1 = document.querySelector('h1');
+    const select = document.querySelector('select');
+    const audio = document.querySelector('audio');
+    
+    renderBackground(selection);
     renderSelectionBackground();
     renderAudio();
+}
+
+function renderBackground(selection) {
+    
+    if (selection === 'beach') {
+
+    }
 }

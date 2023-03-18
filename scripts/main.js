@@ -21,6 +21,22 @@ function renderSelectedScene(selection) {
     renderAudio(selection);
 }
 
+function renderBackground(selection) {
+    if (selection === 'beach') {
+        html.style.background = 'url("../images/beach.jpeg")';
+        html.style.backgroundSize = 'cover';
+    } else if (selection === 'forest') {
+        html.style.background = 'url("../images/forest.jpeg")';
+        html.style.backgroundSize = 'cover';
+    } else if (selection === 'stream') {
+        html.style.background = 'url("../images/stream.webp")';
+        html.style.backgroundSize = 'cover';
+    } else if (selection === 'rain') {
+        html.style.background = 'url("../images/rain.jpeg")';
+        html.style.backgroundSize = 'cover';
+    }
+}
+
 function renderHeader(selection) {
     if (selection === 'beach') {
         header.innerText = 'Beach';
@@ -45,22 +61,6 @@ function renderSelectionBackground(selection) {
     }
 }
 
-function renderBackground(selection) {
-    if (selection === 'beach') {
-        html.style.background = 'url("../images/beach.jpeg")';
-        html.style.backgroundSize = 'cover';
-    } else if (selection === 'forest') {
-        html.style.background = 'url("../images/forest.jpeg")';
-        html.style.backgroundSize = 'cover';
-    } else if (selection === 'stream') {
-        html.style.background = 'url("../images/stream.webp")';
-        html.style.backgroundSize = 'cover';
-    } else if (selection === 'rain') {
-        html.style.background = 'url("../images/rain.jpeg")';
-        html.style.backgroundSize = 'cover';
-    }
-}
-
 function renderAudio(selection) {
     if (selection === 'beach') {
         audio.setAttribute('src', '../audio/beach.mp3');
@@ -73,9 +73,18 @@ function renderAudio(selection) {
     }
 }
 
+function renderPage() {
+    if (localStorage.getItem('selection')) {
+        const selection = localStorage.getItem('selection');
+        renderSelectedScene(selection);
+    }
+}
+
 // ------* event listener *---------
 
 select.addEventListener('input', (event) => {
     onSceneOptionSelected(event);
 })
 
+// -------* load scene saved in localStorage *----------
+renderPage();

@@ -77,7 +77,17 @@ function renderPage() {
     if (localStorage.getItem('selection')) {
         const selection = localStorage.getItem('selection');
         renderSelectedScene(selection);
-    }
+        selectOptionElementMatchingLocalStorage(selection);
+        }
+}
+
+function selectOptionElementMatchingLocalStorage(selection) {
+    const [...allOptionElements] = document.querySelectorAll('option');
+    allOptionElements.forEach(option => {
+        option.selected = false;
+    })
+    const selectedOptionElement = document.querySelector(`#${selection}`);
+    selectedOptionElement.selected = true;
 }
 
 // ------* event listener *---------

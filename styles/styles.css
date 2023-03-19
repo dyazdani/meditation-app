@@ -27,4 +27,14 @@ h1 {
     border: 1px solid black;
     width: fit-content;
     padding: 1rem;
+    font-family: 'Gloria Hallelujah', cursive;
+    line-height: 1.5rem;
+}
+
+option {
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+figure, label, select {
+    font-size: 1.2rem;
 }

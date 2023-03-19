@@ -10,6 +10,9 @@ function onSceneOptionSelected(event) {
     const sceneSelection = event.target.value;
     localStorage.setItem('selection', sceneSelection);
     const selection = localStorage.getItem('selection');
+
+    const chooseSceneOption = document.querySelector('#choose');
+    chooseSceneOption.remove();
     
     renderSelectedScene(selection);
 }
@@ -78,6 +81,9 @@ function renderPage() {
         const selection = localStorage.getItem('selection');
         renderSelectedScene(selection);
         selectOptionElementMatchingLocalStorage(selection);
+
+        const chooseSceneOption = document.querySelector('#choose');
+        chooseSceneOption.remove();
         }
 }
 

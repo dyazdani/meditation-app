@@ -1,10 +1,33 @@
 <!DOCTYPE html>
 <html>
+    <div id="overlay">click to start meditation</div>
     <head>
         <link rel="stylesheet" href="./styles/styles.css" />
         <script src="scripts/main.js" type="module"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
     </head>
     <body>
-        <!-- TODO: add HTML -->
+        <main>
+            <div id="selection-div">
+                <h1></h1>
+                <figure>
+                    <blockquote cite="https://quod.lib.umich.edu/a/amverse/BAD1982.0001.001/1:6.15?rgn=div2;view=fulltext">
+                        <p>"Live in the sunshine,<br>swim the sea,<br>drink the wild air."</p>
+                    </blockquote>
+                    <figcaption>- Ralph Waldo Emerson</figcaption>
+                </figure>
+                <label for="scene-select">Change Scene:</label>
+                <select name="scenes" id="scene-select">
+                    <option id="choose" value="">Choose a scene</option>
+                    <option id="beach" value="beach">beach</option>
+                    <option id="forest" value="forest">forest</option>
+                    <option id="rain" value="rain">rain</option>
+                    <option id="stream" value="stream">stream</option>
+                </select>
+                <audio src="" autoplay loop></audio>
+            </div>
+        </main>
     </body>
 </html>

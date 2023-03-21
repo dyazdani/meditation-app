@@ -19,6 +19,11 @@ function onSceneOptionSelected(event) {
     renderSelectedScene(selection);
 }
 
+function onClickToStartMedicationClicked() {
+    const overlay = document.querySelector('#overlay');
+    overlay.remove();
+}
+
 function renderSelectedScene(selection) {
     renderBackground(selection);
     renderHeader(selection)
@@ -100,11 +105,13 @@ function selectOptionElementMatchingLocalStorage(selection) {
     selectedOptionElement.selected = true;
 }
 
-// ------* event listener *---------
+// ------* event listeners *---------
 
 select.addEventListener('input', (event) => {
     onSceneOptionSelected(event);
 })
+
+document.documentElement.addEventListener('click', onClickToStartMedicationClicked);
 
 // -------* load scene saved in localStorage *----------
 renderPage();

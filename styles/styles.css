@@ -1,5 +1,4 @@
 html {
-    /* background: url("../images/beach.jpeg"); */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -45,4 +44,17 @@ select {
 
 figure {
     margin-bottom: 4rem;
+}
+
+#overlay {
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.791);
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 3rem;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    line-height: 100vh;
 }
